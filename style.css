@@ -1,0 +1,174 @@
+/* 共通リセット */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ベース設定 */
+body {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: hsl(30, 54%, 90%);
+  color: hsl(30, 10%, 34%);
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+/* メインカード */
+.card {
+  max-width: 736px;
+  background-color: white;
+  border-radius: 1.5rem;
+  padding: 2rem;
+}
+
+/* メイン画像 */
+.main-image {
+  width: 100%;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* 各セクションの余白 */
+section, search {
+  margin-bottom: 2.5rem;
+}
+
+/* 見出し */
+h1 {
+  font-family: 'Young Serif', serif;
+  font-size: 2.5rem;
+  color: hsl(24, 5%, 18%);
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-family: 'Young Serif', serif;
+  font-size: 1.75rem;
+  color: hsl(14, 45%, 36%);
+  margin-bottom: 1rem;
+}
+
+/* 時間セクション */
+.prep-time {
+  background-color: hsl(330, 100%, 98%);
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+
+.prep-time ul {
+  padding-left: 1.5rem;
+}
+
+.prep-time li {
+  margin-bottom: 0.5rem;
+}
+
+.prep-time strong {
+  color: hsl(332, 51%, 32%);
+  font-weight: 700;
+}
+
+/* 材料リスト */
+.ingredients ul,
+.instructions ol {
+  padding-left: 1.5rem;
+}
+
+.ingredients li,
+.instructions li {
+  margin-bottom: 0.5rem;
+}
+
+/* 番号付きリスト（説明） */
+.instructions li::marker {
+  font-weight: bold;
+  color: hsl(14, 45%, 36%);
+}
+
+/* 各ステップの太字タイトル */
+.instructions strong {
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 0.25rem;
+}
+
+/* 栄養テーブル */
+.nutrition p {
+  margin-top: 0.5rem;
+}
+
+.nutrition table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.nutrition td {
+  padding: 1rem 0;
+  border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+
+.nutrition td:last-child {
+  color: hsl(14, 45%, 36%);
+  font-weight: 600;
+}
+
+/* チャレンジ by */
+.attribution {
+  margin-top: 100px;
+}
+
+/* タブレット対応（最大幅768px） */
+@media (max-width: 768px) {
+  body {
+    padding: 24px;
+  }
+
+  .card {
+    padding: 24px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+}
+
+/* スマホ対応（最大幅390px） */
+@media (max-width: 390px) {
+  body {
+    padding: 16px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .prep-time,
+  .ingredients li,
+  .instructions li,
+  .nutrition td {
+    font-size: 14px;
+  }
+
+  .nutrition td {
+    padding: 12px 0;
+  }
+}
